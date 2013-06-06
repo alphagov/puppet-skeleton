@@ -5,5 +5,4 @@ FileList['lib/tasks/*.rake'].each do |rake_file|
   import rake_file
 end
 
-# Currently empty.
-task :default => []
+task :default => [:lint]
