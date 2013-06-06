@@ -10,4 +10,7 @@ FileList['lib/tasks/*.rake'].each do |rake_file|
   import rake_file
 end
 
-task :default => [:lint]
+task :default => [
+  :syntax,
+  :lint,
+]
