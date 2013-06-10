@@ -1,5 +1,3 @@
-desc "Run all syntax checks"
-task :syntax => [
-  'syntax:puppet',
-  'syntax:templates',
-]
+require 'puppet-syntax/tasks/puppet-syntax'
+
+PuppetSyntax.exclude_paths = ["vendor/**/*"]
