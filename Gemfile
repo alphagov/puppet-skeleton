@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
+# Versions can be overridden with environment variables for matrix testing.
+# Travis will remove Gemfile.lock before installing deps. As such, it is
+# advisable to pin major versions in this Gemfile.
+
 # Puppet core.
-# Versions can be overridden with environment variables for the benefit of
-# matrix testing. As such, it is inadvisable to commit Gemfile.lock
 gem 'puppet', ENV['PUPPET_VERSION'] || '~> 3.1.0'
 gem 'facter', ENV['FACTER_VERSION'] || '~> 1.6.0'
 

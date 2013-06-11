@@ -1,4 +1,6 @@
 language: ruby
+# Ignore lock file to facilitate matrix builds.
+before_install: rm Gemfile.lock
 rvm:
   - 1.9.3
   - ruby-head
