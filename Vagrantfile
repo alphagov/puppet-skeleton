@@ -27,6 +27,7 @@ Vagrant.configure("2") do |config|
 
       config.vm.provider :virtualbox do |vb|
         modifyvm_args = ['modifyvm', :id]
+        modifyvm_args << "--name" << node_name
         if node_opts[:memory]
           modifyvm_args << "--memory" << node_opts[:memory]
         end
