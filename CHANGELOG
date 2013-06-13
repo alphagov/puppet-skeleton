@@ -1,2 +1,9 @@
+Pending
+  * Switch to PuppetLabs basebox for Puppet 3.x
+  * More verbose output from Puppet runs.
+  * Add examples of assigning IPs and RAM to Vagrant nodes.
+  * Assign node names in VirtualBox.
+  * Add hiera example.
+
 2013-06-11 - Dan Carley - 0.0.1
 	* Initial release
