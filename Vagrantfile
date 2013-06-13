@@ -18,6 +18,7 @@ Vagrant.configure("2") do |config|
     puppet.options = [
       "--verbose", "--summarize",
       "--reports", "store",
+      "--hiera_config", "/vagrant/hiera.yaml",
     ]
   end
 
