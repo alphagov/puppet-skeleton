@@ -15,11 +15,14 @@ Vagrant.configure("2") do |config|
     vb.customize(modifyvm_args)
   end
 
-  config.vm.provision :puppet,
-    :options => ["--debug", "--verbose", "--summarize", "--reports", "store"] do |puppet|
+  config.vm.provision :puppet do |puppet|
     puppet.manifest_file  = "site.pp"
     puppet.manifests_path = "manifests"
     puppet.module_path    = [ "modules", "vendor/modules" ]
+    puppet.options = [
+      "--verbose", "--summarize",
+      "--reports", "store",
+    ]
   end
 
   nodes.each do |node_name|
