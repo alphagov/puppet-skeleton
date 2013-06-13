@@ -8,13 +8,17 @@ nodes = {
 }
 
 Vagrant.configure("2") do |config|
-  config.vm.box     = "precise64"
-  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+  config.vm.box     = "puppet-precise64"
+  config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-1204-x64.box"
 
   config.vm.provision :puppet do |puppet|
     puppet.manifest_file  = "site.pp"
     puppet.manifests_path = "manifests"
     puppet.module_path    = [ "modules", "vendor/modules" ]
+    puppet.options = [
+      "--verbose", "--summarize",
+      "--reports", "store",
+    ]
   end
 
   nodes.each do |node_name, node_opts|
