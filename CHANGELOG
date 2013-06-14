@@ -1,9 +1,10 @@
-Pending
+2013-06-14 - Dan Carley - 0.0.2
   * Switch to PuppetLabs basebox for Puppet 3.x
+  * Upgrade puppet-syntax for Puppet 3.x support.
   * More verbose output from Puppet runs.
   * Add examples of assigning IPs and RAM to Vagrant nodes.
   * Assign node names in VirtualBox.
-  * Add hiera example.
+  * Use heira as a lightweight ENC.
 
 2013-06-11 - Dan Carley - 0.0.1
 	* Initial release
