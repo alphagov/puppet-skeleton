@@ -30,7 +30,7 @@ Vagrant.configure("2") do |config|
         node.vm.network(:private_network, :ip => node_opts[:ip])
       end
 
-      config.vm.provider :virtualbox do |vb|
+      node.vm.provider :virtualbox do |vb|
         modifyvm_args = ['modifyvm', :id]
         modifyvm_args << "--name" << node_name
         if node_opts[:memory]
