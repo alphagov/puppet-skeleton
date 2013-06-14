@@ -17,7 +17,7 @@ GEM
       facter (~> 1.6)
       hiera (~> 1.0)
     puppet-lint (0.3.2)
-    puppet-syntax (0.0.3)
+    puppet-syntax (0.0.4)
       puppet (>= 2.7.0)
       rake
     puppetlabs_spec_helper (0.4.1)
