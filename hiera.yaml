@@ -1,5 +1,5 @@
 :hierarchy:
-  - "%{::hostname}"
+  - "%{::clientcert}"
   - "%{::environment}"
   - common
 :backends:
