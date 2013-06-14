@@ -6,6 +6,9 @@ nodes = {
   'node1' => {:ip => '172.16.10.2'},
   'node2' => {:ip => '172.16.10.3'},
 }
+node_defaults = {
+  :memory => 384,
+}
 
 Vagrant.configure("2") do |config|
   config.vm.box     = "puppet-precise64"
@@ -25,6 +28,7 @@ Vagrant.configure("2") do |config|
   nodes.each do |node_name, node_opts|
     config.vm.define node_name do |node|
       node.vm.hostname = node_name
+      node_opts = node_defaults.merge(node_opts)
 
       if node_opts[:ip]
         node.vm.network(:private_network, :ip => node_opts[:ip])
