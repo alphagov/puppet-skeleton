@@ -1,3 +1,6 @@
+Pending
+  * Downgrade stdlib to 3.x
+
 2013-06-14 - Dan Carley - 0.0.2
   * Switch to PuppetLabs basebox for Puppet 3.x
   * Upgrade puppet-syntax for Puppet 3.x support.
