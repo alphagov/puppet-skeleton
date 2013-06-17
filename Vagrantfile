@@ -7,6 +7,7 @@ nodes = {
   'node2' => {:ip => '172.16.10.3'},
 }
 node_defaults = {
+  :domain => 'internal',
   :memory => 384,
 }
 
@@ -27,8 +28,10 @@ Vagrant.configure("2") do |config|
 
   nodes.each do |node_name, node_opts|
     config.vm.define node_name do |node|
-      node.vm.hostname = node_name
       node_opts = node_defaults.merge(node_opts)
+      fqdn = "#{node_name}.#{node_opts[:domain]}"
+
+      node.vm.hostname = fqdn
 
       if node_opts[:ip]
         node.vm.network(:private_network, :ip => node_opts[:ip])
@@ -36,7 +39,7 @@ Vagrant.configure("2") do |config|
 
       node.vm.provider :virtualbox do |vb|
         modifyvm_args = ['modifyvm', :id]
-        modifyvm_args << "--name" << node_name
+        modifyvm_args << "--name" << fqdn
         if node_opts[:memory]
           modifyvm_args << "--memory" << node_opts[:memory]
         end
