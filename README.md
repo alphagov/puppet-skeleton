@@ -47,4 +47,4 @@ Puppet provisioner.
 ## Requirements
 
 - [Ruby](http://www.ruby-lang.org/) and [Bundler](http://gembundler.com/) -- ideally with [rbenv](https://github.com/sstephenson/rbenv)
-- [Vagrant](http://www.vagrantup.com/) -- ideally version >= 1.1
+- [Vagrant](http://www.vagrantup.com/) -- version >= 1.1
