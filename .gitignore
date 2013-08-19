@@ -1,2 +1,4 @@
 /.bundle/
+/.tmp/
+/.vagrant/
 /vendor/
