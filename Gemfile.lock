@@ -5,11 +5,15 @@ GEM
     facter (1.6.18)
     hiera (1.2.1)
       json_pure
-    json (1.8.0)
+    highline (1.6.20)
+    json (1.8.1)
     json_pure (1.8.0)
-    librarian-puppet (0.9.9)
-      json
+    librarian (0.1.1)
+      highline
       thor (~> 0.15)
+    librarian-puppet-maestrodev (0.9.10.1)
+      json
+      librarian (>= 0.1.1)
     metaclass (0.0.1)
     mocha (0.14.0)
       metaclass (~> 0.0.1)
@@ -43,7 +47,7 @@ PLATFORMS
 
 DEPENDENCIES
   facter (~> 1.6.0)
-  librarian-puppet (~> 0.9.0)
+  librarian-puppet-maestrodev (~> 0.9.0)
   puppet (~> 3.1.0)
   puppet-lint (~> 0.3.0)
   puppet-syntax
