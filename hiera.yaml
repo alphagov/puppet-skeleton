@@ -5,4 +5,4 @@
 :backends:
   - yaml
 :yaml:
-  :datadir: '/vagrant/hieradata'
+  :datadir: '/opt/puppet/hieradata'

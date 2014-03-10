@@ -15,16 +15,13 @@ Vagrant.configure("2") do |config|
   config.vm.box     = "puppet-precise64"
   config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-1204-x64.box"
 
-  config.vm.provision :puppet do |puppet|
-    puppet.manifest_file  = "site.pp"
-    puppet.manifests_path = "manifests"
-    puppet.module_path    = [ "modules", "vendor/modules" ]
-    puppet.options = [
-      "--verbose", "--summarize",
-      "--reports", "store",
-      "--hiera_config", "/vagrant/hiera.yaml",
-    ]
-  end
+  config.vm.synced_folder '.', '/opt/puppet'
+
+  config.vm.provision :shell,
+    :inline => 'exec /opt/puppet/tools/bootstrap'
+  config.vm.provision :shell,
+    :inline => 'exec /opt/puppet/tools/puppet-apply $@',
+    :args   => '--verbose --summarize --environment development'
 
   nodes.each do |node_name, node_opts|
     config.vm.define node_name do |node|
