@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+if ! dpkg -l puppetlabs-release >/dev/null; then
+  TMPFILE=$(mktemp)
+  wget -qO ${TMPFILE} http://apt.puppetlabs.com/puppetlabs-release-precise.deb
+  dpkg -i ${TMPFILE}
+  rm ${TMPFILE}
+  apt-get update -qq
+fi
+
+apt-get install -y -qq --no-upgrade ruby1.9.1 puppet='3.2.*' puppet-common='3.2.*'
