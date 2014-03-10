@@ -1,6 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+# To save yourself from clashes it is recommended that you rename the nodes
+# and change the IPs if you use this skeleton as a base for mulitple puppet repos
 nodes = {
   'node0' => {:ip => '172.16.10.10', :memory => 512},
   'node1' => {:ip => '172.16.10.11'},
