@@ -25,7 +25,7 @@ Here are the headline details of what's inside.
 [librarian-puppet](https://github.com/rodjek/librarian-puppet) is used to
 pull in external modules. Externalising modules makes them more re-usable.
 
-As sample `Puppetfile` and `Puppetfile.lock` is included which contains
+A sample `Puppetfile` and `Puppetfile.lock` is included which contains
 [puppetlabs-stdlib](https://github.com/puppetlabs/puppetlabs-stdlib).
 
 ### Tests
