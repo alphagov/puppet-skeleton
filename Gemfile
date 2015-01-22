@@ -12,6 +12,7 @@ gem 'facter', ENV['FACTER_VERSION'] || '~> 1.6.0'
 gem 'librarian-puppet'
 
 # Testing utilities.
+gem 'beaker-rspec'
 gem 'rake'
 gem 'puppet-syntax'
 gem 'puppet-lint', '~> 0.3.0'
