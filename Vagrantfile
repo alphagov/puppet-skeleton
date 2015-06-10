@@ -14,7 +14,8 @@ node_defaults = {
 }
 
 Vagrant.configure("2") do |config|
-  config.vm.box     = "puppetlabs/ubuntu-14.04-64-puppet"
+  config.vm.box     = "puppet-precise64"
+  config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-1204-x64.box"
 
   config.vm.synced_folder '.', '/opt/puppet'
 
