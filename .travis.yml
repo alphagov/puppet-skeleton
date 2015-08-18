@@ -1,4 +1,6 @@
 language: ruby
+# Force containerised builds in Travis CI
+sudo: false
 # Ignore lock file to facilitate matrix builds.
 before_install: rm Gemfile.lock
 rvm:
