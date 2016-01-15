@@ -9,4 +9,4 @@ if ! dpkg -l puppetlabs-release >/dev/null; then
   apt-get update -qq
 fi
 
-apt-get install -y -qq --no-upgrade ruby1.9.1 puppet='3.2.*' puppet-common='3.2.*'
+apt-get install -y -qq --no-upgrade ruby1.9.1 puppet='3.8.*' puppet-common='3.8.*'
