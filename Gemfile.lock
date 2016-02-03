@@ -42,7 +42,7 @@ GEM
       facter (> 1.6, < 3)
       hiera (~> 1.0)
       json_pure
-    puppet-lint (0.3.2)
+    puppet-lint (1.0.1)
     puppet-syntax (2.1.0)
       rake
     puppet_forge (1.0.3)
@@ -76,7 +76,7 @@ DEPENDENCIES
   facter (~> 1.6.0)
   librarian-puppet
   puppet (~> 3.8.2)
-  puppet-lint (~> 0.3.0)
+  puppet-lint (~> 1.0.1)
   puppet-syntax (~> 2.1.0)
   puppetlabs_spec_helper (~> 1.0.1)
   rake
