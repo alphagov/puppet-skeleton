@@ -43,8 +43,7 @@ GEM
       hiera (~> 1.0)
       json_pure
     puppet-lint (0.3.2)
-    puppet-syntax (0.0.4)
-      puppet (>= 2.7.0)
+    puppet-syntax (2.1.0)
       rake
     puppet_forge (1.0.3)
       her (~> 0.6)
@@ -77,7 +76,7 @@ DEPENDENCIES
   librarian-puppet
   puppet (~> 3.8.2)
   puppet-lint (~> 0.3.0)
-  puppet-syntax
+  puppet-syntax (~> 2.1.0)
   puppetlabs_spec_helper (~> 0.4.0)
   rake
   rspec-puppet (~> 0.1.0)
