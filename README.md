@@ -41,7 +41,7 @@ A modularised `Rakefile` will call the following test suites, in order:
 
 ### Vagrant
 
-A simple `Vagrantfile` demonstrating the use of a mutli-VM setup with a
+A simple `Vagrantfile` demonstrating the use of a multi-VM setup with a
 Puppet provisioner.
 
 ## Requirements
